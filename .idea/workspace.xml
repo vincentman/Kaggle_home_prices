@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be04df6-9610-4dd8-9bca-05a49a055c24" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EDA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/EDA.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="EDA.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EDA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="302">
+              <caret line="33" column="35" lean-forward="true" selection-start-line="30" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -31,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/EDA.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="3" />
+              <selected id="18" />
             </state>
           </provider>
         </entry>
@@ -65,16 +64,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EDA.ipynb" />
         <option value="$PROJECT_DIR$/EDA.py" />
+        <option value="$PROJECT_DIR$/EDA.ipynb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="123" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="89" />
+    <option name="y" value="134" />
     <option name="width" value="1635" />
-    <option name="height" value="1000" />
+    <option name="height" value="914" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -118,7 +117,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.EDA">
+    <configuration name="Kaggle_home_prices" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="Kaggle_home_prices" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+    </configuration>
     <configuration name="EDA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Kaggle_home_prices" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +152,10 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <list>
+      <item itemvalue="Python.EDA" />
+      <item itemvalue="Jupyter Notebook.Kaggle_home_prices" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.EDA" />
@@ -157,19 +176,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="123" y="23" width="1635" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15341265" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12908325" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22029988" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22029988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22260669" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.20910075" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -187,68 +206,92 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/EDA.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
+          <line>34</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/EDA.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="5" />
+          <line>30</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>corrmat.shape</expression-string>
+        <expression-string>df_train[df_train['Id'] == 1299]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.columns.size</expression-string>
+        <expression-string>ids.index</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.columns</expression-string>
+        <expression-string>ids.values</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(df_train)</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[:2]['Id']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.size</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[:2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.isnull().sum()</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[0:2]['Id'].values</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.isnull()sum()</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[0:2]['Id'].index.values</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.isnull().count()</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[0:2]['Id'].index</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>df_train.isnull()</expression-string>
+        <expression-string>df_train.sort_values(by = 'GrLivArea',ascending = False)[0:2]['Id']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/EDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120208">
+          <caret line="5464" column="8" selection-start-line="5464" selection-start-column="8" selection-end-line="5464" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -282,8 +325,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="302">
+          <caret line="33" column="35" lean-forward="true" selection-start-line="30" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -293,7 +336,7 @@
     <entry file="file://$PROJECT_DIR$/EDA.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="15" />
+          <selected id="18" />
         </state>
       </provider>
     </entry>
