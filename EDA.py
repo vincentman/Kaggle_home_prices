@@ -7,29 +7,38 @@ from sklearn.preprocessing import StandardScaler
 from scipy import stats
 
 df_train = pd.read_csv('train.csv')
-corrmat = df_train.corr()
-k = 10  # number ofvariables for heatmap
-cols = corrmat.nlargest(k, 'SalePrice')['SalePrice'].index
-cm = np.corrcoef(df_train[cols].values)
 
 total = df_train.isnull().sum().sort_values(ascending=False)
 percent = (df_train.isnull().sum() / df_train.isnull().count()).sort_values(ascending=False)
 missing_data = pd.concat([total, percent], axis=1, keys=['Total', 'Percent'])
-print(missing_data.head(20))
 
+# 刪除缺值樣本數超過1個的欄位
 df_train = df_train.drop((missing_data[missing_data['Total'] > 1]).index, 1)
-print(df_train.loc[df_train['Electrical'].isnull()].index)
-df_train = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index)
-saleprice_scaled = StandardScaler().fit_transform(df_train['SalePrice'][:, np.newaxis])
-low_range = saleprice_scaled[saleprice_scaled[:, 0].argsort()][:10]
-high_range = saleprice_scaled[saleprice_scaled[:, 0].argsort()][-10:]
-print('outer range (low) of the distribution:')
-print(low_range)
-print('\nouter range (high) of the distribution:')
-print(high_range)
 
-ids = df_train.sort_values(by = 'GrLivArea',ascending = False)[:2]['Id']
-# df_train = df_train.drop(df_train[df_train['Id'] == 1299].index)
-# df_train = df_train.drop(df_train[df_train['Id'] == 524].index)
+# 刪除Electrical欄位缺值的樣本
+df_train = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index)
+
+# 檢查是否還有缺值的欄位
+print('missing value max count: ', df_train.isnull().sum().max())
+
+# 刪除離群的 GrLivArea 值很高的數據
+ids = df_train.sort_values(by='GrLivArea', ascending=False)[:2]['Id']
 df_train = df_train.drop(ids.index)
-print(df_train)
+
+# 將 SalePrice 做對數變換
+df_train['SalePrice'] = np.log(df_train['SalePrice'])
+
+# 將 GrLivArea 做對數變換
+df_train['GrLivArea'] = np.log(df_train['GrLivArea'])
+
+# 新增'HasBsmt'欄位：表示是否有地下室
+df_train['HasBsmt'] = 0
+df_train.loc[df_train['TotalBsmtSF'] > 0, 'HasBsmt'] = 1
+
+# 將 TotalBsmtSF 做對數變換
+df_train['TotalBsmtSF'] = np.log(df_train['TotalBsmtSF'])
+
+# 將類別變量轉換為虛擬變量(one-hot encoding)
+df_train = pd.get_dummies(df_train)
+
+print('columns: \n', df_train.columns.values)
