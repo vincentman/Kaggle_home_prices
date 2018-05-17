@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be04df6-9610-4dd8-9bca-05a49a055c24" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/EDA2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Kaggle_home_prices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kaggle_home_prices.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/EDA1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/EDA1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/EDA2.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/EDA2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/process_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/split_train_test_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/random_forest_regressor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/EDA-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/EDA-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EDA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EDA2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/EDA2-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/EDA2-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EDA.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EDA.py">
+      <file leaf-file-name="process_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="443">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="split_train_test_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -31,14 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EDA2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EDA2.py">
+      <file leaf-file-name="random_forest_regressor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/random_forest_regressor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="111">
+              <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -55,7 +83,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>concat</find>
+      <find>&quot;</find>
+      <find>TotalBsmtSF</find>
+      <find>max</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,23 +97,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EDA.py" />
         <option value="$PROJECT_DIR$/EDA.ipynb" />
         <option value="$PROJECT_DIR$/EDA2.py" />
+        <option value="$PROJECT_DIR$/EDA.py" />
+        <option value="$PROJECT_DIR$/common/EDA3.py" />
+        <option value="$PROJECT_DIR$/common/EDA.py" />
+        <option value="$PROJECT_DIR$/common/EDA2.py" />
+        <option value="$PROJECT_DIR$/common/EDA1.py" />
+        <option value="$PROJECT_DIR$/common/__init__.py" />
+        <option value="$PROJECT_DIR$/common/load_csv.py" />
+        <option value="$PROJECT_DIR$/common/process_data.py" />
+        <option value="$PROJECT_DIR$/random_forest_regressor.py" />
+        <option value="$PROJECT_DIR$/common/split_train_test_data.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="289" />
-    <option name="y" value="55" />
-    <option name="width" value="1579" />
-    <option name="height" value="940" />
+    <option name="x" value="80" />
+    <option name="y" value="3" />
+    <option name="width" value="1635" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -87,15 +134,19 @@
               <item name="Kaggle_home_prices" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kaggle_home_prices" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Kaggle_home_prices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kaggle_home_prices" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../machine_learn_Book/Book_Python_ML" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -104,6 +155,11 @@
         <option name="myUseModuleSdk" value="true" />
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\common" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -117,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.EDA2">
+  <component name="RunManager" selected="Python.random_forest_regressor">
     <configuration name="Kaggle_home_prices" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Kaggle_home_prices" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,17 +198,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EDA.py" />
+      <option name="SCRIPT_NAME" value="D:\machine_learn\kaggle\Kaggle_home_prices\common\EDA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="EDA2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="random_forest_regressor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Kaggle_home_prices" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -164,7 +220,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EDA2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_forest_regressor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,11 +229,11 @@
     <list>
       <item itemvalue="Jupyter Notebook.Kaggle_home_prices" />
       <item itemvalue="Python.EDA" />
-      <item itemvalue="Python.EDA2" />
+      <item itemvalue="Python.random_forest_regressor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.EDA2" />
+        <item itemvalue="Python.random_forest_regressor" />
         <item itemvalue="Python.EDA" />
       </list>
     </recent_temporary>
@@ -202,20 +258,20 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12434141" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4582882" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39328277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40411702" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40303358" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3298731" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -225,17 +281,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/EDA.py</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/common/EDA.py</url>
+          <line>50</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/EDA2.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/common/split_train_test_data.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -247,6 +303,36 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>df_train.iloc[:train_data_size, :(df_train.shape[1]-2)]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_train.shape[1]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>train.describe().columns.values</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>train.describe()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>null_mean_df.sort_values(by='null_mean')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>null_mean_df</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>notnull_index</expression-string>
         <language-id>Python</language-id>
@@ -262,40 +348,44 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>dd = null_count_df.drop(notnull_index)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>null_count_df.drop(notnull_index)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>null_count_df[null_count_df['null_count']&gt;0].index</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>null_count_df.drop(null_count_df[null_count_df['null_count']&gt;0].index)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>null_count_df['null_count']&gt;0</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>null_count_df.drop(null_count_df['null_count']&gt;0, axis=1)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
           <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
@@ -305,14 +395,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
@@ -322,7 +412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
@@ -332,14 +422,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
@@ -349,7 +439,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
@@ -360,14 +450,14 @@
       </provider>
     </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
-    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
@@ -377,7 +467,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
@@ -386,34 +476,81 @@
     </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
-    <entry file="file://$PROJECT_DIR$/EDA.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA2.ipynb">
+    <entry file="file://$PROJECT_DIR$/common/EDA2.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA.py">
+    <entry file="file://$PROJECT_DIR$/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="1364">
+          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EDA2.py">
+    <entry file="file://$PROJECT_DIR$/common/EDA2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="440">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/EDA1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_forest_regressor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
