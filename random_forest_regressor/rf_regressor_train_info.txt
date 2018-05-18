@@ -1,0 +1,3 @@
+RandomForestRegressor, elapsed training time: 0 min, 0 sec 
+RMSE train: 0.114
+R^2 train: 0.919

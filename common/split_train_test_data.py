@@ -1,15 +1,16 @@
-import pandas as pd
 import math
 
 train_data_ratio = 0.8
 
 
-def get_train_data(is_train, df_train):
+def get_splitted_data(is_train, data):
     train_data_size = math.ceil(1460 * train_data_ratio)
     if is_train:
-        x = df_train.iloc[:train_data_size, :(df_train.shape[1]-2)]
-        y = df_train.SalePrice[:train_data_size]
+        y = data.SalePrice[:train_data_size]
+        data = data.drop('SalePrice', axis=1)
+        x = data.iloc[:train_data_size, :(data.shape[1])]
     else:
-        x = df_train.iloc[train_data_size:, :(df_train.shape[1]-2)]
-        y = df_train.SalePrice[train_data_size:]
+        y = data.SalePrice[train_data_size:]
+        data = data.drop('SalePrice', axis=1)
+        x = data.iloc[train_data_size:, :(data.shape[1])]
     return x, y
