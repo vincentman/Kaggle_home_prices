@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.externals import joblib
 import time
 import numpy as np
-from sklearn.linear_model import ElasticNet, Lasso,  BayesianRidge, LassoLarsIC
+from sklearn.ensemble import GradientBoostingRegressor
 
 pd_csv = pd.read_csv('../train.csv')
 
@@ -31,11 +31,14 @@ print('x_train(one-hot encoding).shape: ', x_train.shape)
 # print('x_train(one-hot encoding).columns => \n', x_train.columns.values)
 
 start = time.time()
-# clf = RandomForestRegressor(n_estimators=1000,
-#                             criterion='mse',
-#                             random_state=1,
-#                             n_jobs=-1)
-clf = ElasticNet(alpha=0.0005, l1_ratio=.5, random_state=3)
+clf = RandomForestRegressor(n_estimators=1000,
+                            criterion='mse',
+                            random_state=1,
+                            n_jobs=-1)
+# clf = GradientBoostingRegressor(n_estimators=3000, learning_rate=0.05,
+#                                    max_depth=4, max_features='sqrt',
+#                                    min_samples_leaf=15, min_samples_split=10,
+#                                    loss='ls', random_state =5)
 clf.fit(x_train, y_train)
 end = time.time()
 elapsed_train_time = 'RandomForestRegressor, elapsed training time: {} min, {} sec '.format(int((end - start) / 60),
