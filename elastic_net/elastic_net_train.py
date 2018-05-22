@@ -17,9 +17,9 @@ df_train = process_data.get_clean_data(pd_csv, False)
 
 x_train, y_train = split_train_test_data.get_splitted_data(True, df_train)
 
-print('x_train.shape: ', x_train.shape)
-print('x_train.columns => \n', x_train.columns.values)
-print('y_train.shape: ', y_train.shape)
+print('After clean, x_train.shape: ', x_train.shape)
+print('After clean, x_train.columns => \n', x_train.columns.values)
+print('After clean, y_train.shape: ', y_train.shape)
 
 # 將類別變量轉換為虛擬變量(one-hot encoding)
 # x_train = pd.get_dummies(x_train)
@@ -29,7 +29,7 @@ print('y_train.shape: ', y_train.shape)
 categorical = [var for var in x_train.columns if x_train[var].dtype == 'O']
 for col in categorical:
     x_train[col] = x_train[col].astype('category').cat.codes
-print('x_train(one-hot encoding).shape: ', x_train.shape)
+print('After clean, x_train(one-hot encoding).shape: ', x_train.shape)
 # print('x_train(one-hot encoding).columns => \n', x_train.columns.values)
 
 start = time.time()

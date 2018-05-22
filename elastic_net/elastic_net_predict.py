@@ -12,9 +12,9 @@ df_test = process_data.get_clean_data(csv_df, False)
 
 x_test, y_test = split_train_test_data.get_splitted_data(False, df_test)
 
-print('x_test.shape: ', x_test.shape)
-print('x_test.columns => \n', x_test.columns.values)
-print('y_test.shape: ', y_test.shape)
+print('After clean, x_test.shape: ', x_test.shape)
+print('After clean, x_test.columns => \n', x_test.columns.values)
+print('After clean, y_test.shape: ', y_test.shape)
 
 # 將類別變量轉換為虛擬變量(one-hot encoding)
 # x_test = pd.get_dummies(x_test)
@@ -24,7 +24,7 @@ print('y_test.shape: ', y_test.shape)
 categorical = [var for var in x_test.columns if x_test[var].dtype == 'O']
 for col in categorical:
     x_test[col] = x_test[col].astype('category').cat.codes
-print('x_test(one-hot encoding).shape: ', x_test.shape)
+print('After clean, x_test(one-hot encoding).shape: ', x_test.shape)
 # print('x_test(one-hot encoding).columns => \n', x_test.columns.values)
 
 clf = joblib.load('elastic_net_dump.pkl')
