@@ -13,7 +13,16 @@ from sklearn.linear_model import ElasticNetCV
 
 pd_csv = pd.read_csv('../train.csv')
 
-df_train = process_data.get_clean_data(pd_csv, False)
+df_train = process_data.get_clean_data(pd_csv)
+
+# 將 SalePrice 做對數變換
+df_train['SalePrice'] = np.log(df_train['SalePrice'])
+print('After log transformation, SalePrice skewness is ', df_train['SalePrice'].skew())
+
+# 刪除Electrical欄位缺值的樣本(僅1個樣本)
+print('Sample(Id={}) is dropped due to Electrical is null'.format(
+    df_train.loc[df_train['Electrical'].isnull()]['Id'].values))
+csv_df = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index)
 
 x_train, y_train = split_train_test_data.get_splitted_data(True, df_train)
 

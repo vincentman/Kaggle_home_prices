@@ -8,7 +8,16 @@ import numpy as np
 
 csv_df = pd.read_csv('../train.csv')
 
-df_test = process_data.get_clean_data(csv_df, False)
+df_test = process_data.get_clean_data(csv_df)
+
+# 將 SalePrice 做對數變換
+df_test['SalePrice'] = np.log(df_test['SalePrice'])
+print('After log transformation, SalePrice skewness is ', df_test['SalePrice'].skew())
+
+# 刪除Electrical欄位缺值的樣本(僅1個樣本)
+print('Sample(Id={}) is dropped due to Electrical is null'.format(
+    df_test.loc[df_test['Electrical'].isnull()]['Id'].values))
+csv_df = df_test.drop(df_test.loc[df_test['Electrical'].isnull()].index)
 
 x_test, y_test = split_train_test_data.get_splitted_data(False, df_test)
 

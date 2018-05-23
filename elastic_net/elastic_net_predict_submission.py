@@ -8,9 +8,23 @@ import numpy as np
 
 csv_df = pd.read_csv('../test.csv')
 
-x_test = process_data.get_clean_data(csv_df, True)
+x_test = process_data.get_clean_data(csv_df)
 
-print('null sum max=======', x_test.isnull().sum().max())
+# 將缺值的 TotalBsmtSF 以其平均數取代
+x_test['TotalBsmtSF'] = x_test['TotalBsmtSF'].fillna(x_test['TotalBsmtSF'].mean())
+
+# 將缺值的 KitchenQual 以 'TA' 取代
+x_test['KitchenQual'] = x_test['KitchenQual'].fillna('TA')
+
+# 將缺值的 GarageArea 以其平均數取代
+x_test['GarageArea'] = x_test['GarageArea'].fillna(int(x_test['GarageArea'].mean()))
+
+# 將缺值的 SaleType 以 'WD' 取代
+x_test['SaleType'] = x_test['SaleType'].fillna('WD')
+
+# 將缺值的 GarageCars 以 2 取代
+x_test['GarageCars'] = x_test['GarageCars'].fillna(2)
+
 print('After clean, x_test.shape: ', x_test.shape)
 print('After clean, x_test.columns => \n', x_test.columns.values)
 
