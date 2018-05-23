@@ -1,14 +1,17 @@
-from common import split_train_test_data
 from common import process_data
-from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
 import pandas as pd
 from sklearn.externals import joblib
 import numpy as np
 
-csv_df = pd.read_csv('../test.csv')
+df_csv = pd.read_csv('../test.csv')
 
-x_test = process_data.get_clean_data(csv_df)
+print(
+    'Before processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(df_csv)))
+print(
+    'Before processing missing value, sample proportion =>\n{}'.format(
+        process_data.get_missing_value_sample_proportion(df_csv)))
+
+x_test = process_data.get_clean_data(df_csv)
 
 # 將缺值的 TotalBsmtSF 以其平均數取代
 x_test['TotalBsmtSF'] = x_test['TotalBsmtSF'].fillna(x_test['TotalBsmtSF'].mean())
@@ -25,6 +28,13 @@ x_test['SaleType'] = x_test['SaleType'].fillna('WD')
 # 將缺值的 GarageCars 以 2 取代
 x_test['GarageCars'] = x_test['GarageCars'].fillna(2)
 
+print(
+    'After processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(x_test)))
+print(
+    'After processing missing value, sample proportion =>\n{}'.format(
+        process_data.get_missing_value_sample_proportion(x_test)))
+
+print('After clean, x_test.isnull().sum().max(): ', x_test.isnull().sum().max())
 print('After clean, x_test.shape: ', x_test.shape)
 print('After clean, x_test.columns => \n', x_test.columns.values)
 

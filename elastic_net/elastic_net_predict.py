@@ -6,9 +6,9 @@ import pandas as pd
 from sklearn.externals import joblib
 import numpy as np
 
-csv_df = pd.read_csv('../train.csv')
+df_csv = pd.read_csv('../train.csv')
 
-df_test = process_data.get_clean_data(csv_df)
+df_test = process_data.get_clean_data(df_csv)
 
 # 將 SalePrice 做對數變換
 df_test['SalePrice'] = np.log(df_test['SalePrice'])
@@ -17,7 +17,11 @@ print('After log transformation, SalePrice skewness is ', df_test['SalePrice'].s
 # 刪除Electrical欄位缺值的樣本(僅1個樣本)
 print('Sample(Id={}) is dropped due to Electrical is null'.format(
     df_test.loc[df_test['Electrical'].isnull()]['Id'].values))
-csv_df = df_test.drop(df_test.loc[df_test['Electrical'].isnull()].index)
+df_test = df_test.drop(df_test.loc[df_test['Electrical'].isnull()].index)
+
+# 刪除離群的 GrLivArea 值很高的數據
+ids = df_test.sort_values(by='GrLivArea', ascending=False)[:2]['Id']
+df_test = df_test.drop(ids.index)
 
 x_test, y_test = split_train_test_data.get_splitted_data(False, df_test)
 

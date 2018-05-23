@@ -11,9 +11,15 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import ElasticNetCV
 
-pd_csv = pd.read_csv('../train.csv')
+csv_df = pd.read_csv('../train.csv')
 
-df_train = process_data.get_clean_data(pd_csv)
+print(
+    'Before processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(csv_df)))
+print(
+    'Before processing missing value, sample proportion =>\n{}'.format(
+        process_data.get_missing_value_sample_proportion(csv_df)))
+
+df_train = process_data.get_clean_data(csv_df)
 
 # 將 SalePrice 做對數變換
 df_train['SalePrice'] = np.log(df_train['SalePrice'])
@@ -22,7 +28,17 @@ print('After log transformation, SalePrice skewness is ', df_train['SalePrice'].
 # 刪除Electrical欄位缺值的樣本(僅1個樣本)
 print('Sample(Id={}) is dropped due to Electrical is null'.format(
     df_train.loc[df_train['Electrical'].isnull()]['Id'].values))
-csv_df = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index)
+df_train = df_train.drop(df_train.loc[df_train['Electrical'].isnull()].index)
+
+# 刪除離群的 GrLivArea 值很高的數據
+ids = df_train.sort_values(by='GrLivArea', ascending=False)[:2]['Id']
+df_train = df_train.drop(ids.index)
+
+print(
+    'After processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(df_train)))
+print(
+    'After processing missing value, sample proportion =>\n{}'.format(
+        process_data.get_missing_value_sample_proportion(df_train)))
 
 x_train, y_train = split_train_test_data.get_splitted_data(True, df_train)
 

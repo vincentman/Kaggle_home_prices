@@ -2,22 +2,25 @@ import numpy as np
 import pandas as pd
 
 
-def get_clean_data(csv_df):
-    null_count_df = pd.DataFrame(csv_df.isnull().sum())
+# 查看各欄位 missing value 的數量
+def get_missing_value_sample_count(df):
+    null_count_df = pd.DataFrame(df.isnull().sum())
     null_count_df.set_axis(['null_count'], axis=1, inplace=True)
     null_index = null_count_df[null_count_df['null_count'] == 0].index
     null_count_df = null_count_df.drop(null_index).sort_values(by='null_count', ascending=False)
-    print_null_count_df = 'Before processing missing value, sample count =>\n{}'.format(null_count_df)
-    print(print_null_count_df)
+    return null_count_df
 
-    # 查看各欄位 missing value 的比例
-    null_mean_df = pd.DataFrame(csv_df.isnull().mean())
+
+# 查看各欄位 missing value 的比例
+def get_missing_value_sample_proportion(df):
+    null_mean_df = pd.DataFrame(df.isnull().mean())
     null_mean_df.set_axis(['null_mean'], axis=1, inplace=True)
     null_index = null_mean_df[null_mean_df['null_mean'] == 0.].index
     null_mean_df = null_mean_df.drop(null_index).sort_values(by='null_mean', ascending=False)
-    print_null_mean_df = 'Before processing missing value, sample proportion =>\n{}'.format(null_mean_df)
-    print(print_null_mean_df)
+    return null_mean_df
 
+
+def get_clean_data(csv_df):
     # 補缺值：將 FireplaceQu 缺值的內容補成 'None'
     csv_df['FireplaceQu'].fillna('None', inplace=True)
 
@@ -37,31 +40,14 @@ def get_clean_data(csv_df):
     csv_df['Fence'].fillna('None', inplace=True)
 
     # 刪除缺值樣本數超過1個的欄位
-    csv_df = csv_df.drop((null_count_df[null_count_df['null_count'] > 1]).index, 1)
+    csv_df = csv_df.drop(['PoolQC', 'MiscFeature', 'Alley', 'Fence', 'FireplaceQu', 'LotFrontage',
+                          'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageQual', 'GarageCond',
+                          'BsmtExposure', 'BsmtFinType2', 'BsmtFinType1', 'BsmtCond', 'BsmtQual',
+                          'MasVnrArea', 'MasVnrType'], axis=1)
 
     # 刪除 BsmtFinSF1, BsmtFinSF2 欄位，因為上一步已經把 BsmtFinType1, BsmtFinType2 欄位也刪了
     # 刪除 Exterior1st, Exterior2nd, BsmtUnfSF 欄位，因為它與 SalePrice 似乎無關
     csv_df = csv_df.drop(['BsmtFinSF1', 'BsmtFinSF2', 'Exterior1st', 'Exterior2nd'], axis=1)
-
-    # 查看各欄位 missing value 的數量
-    null_count_df = pd.DataFrame(csv_df.isnull().sum())
-    null_count_df.set_axis(['null_count'], axis=1, inplace=True)
-    null_index = null_count_df[null_count_df['null_count'] == 0].index
-    null_count_df = null_count_df.drop(null_index).sort_values(by='null_count', ascending=False)
-    print_null_count_df = 'After processing missing value, sample count =>\n{}'.format(null_count_df)
-    print(print_null_count_df)
-
-    # 查看各欄位 missing value 的比例
-    null_mean_df = pd.DataFrame(csv_df.isnull().mean())
-    null_mean_df.set_axis(['null_mean'], axis=1, inplace=True)
-    null_index = null_mean_df[null_mean_df['null_mean'] == 0.].index
-    null_mean_df = null_mean_df.drop(null_index).sort_values(by='null_mean', ascending=False)
-    print_null_mean_df = 'After processing missing value, sample proportion =>\n{}'.format(null_mean_df)
-    print(print_null_mean_df)
-
-    # 刪除離群的 GrLivArea 值很高的數據
-    ids = csv_df.sort_values(by='GrLivArea', ascending=False)[:2]['Id']
-    csv_df = csv_df.drop(ids.index)
 
     # 將 GrLivArea 做對數變換
     csv_df['GrLivArea'] = np.log(csv_df['GrLivArea'])
