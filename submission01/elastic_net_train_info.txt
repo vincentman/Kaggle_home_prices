@@ -1,0 +1,3 @@
+ElasticNet, elapsed training time: 0 min, 0 sec 
+ElasticNet, RMSE train: 0.120
+ElasticNet, R^2 train: 0.910
