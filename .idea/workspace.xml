@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be04df6-9610-4dd8-9bca-05a49a055c24" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/elastic_net/submission.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Kaggle_home_prices.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kaggle_home_prices.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/EDA_for_predict_submission.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/EDA_for_predict_submission.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/EDA_for_predict_submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/EDA_for_predict_submission.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_dump.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_dump.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_predict_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_predict_info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +26,8 @@
       <file leaf-file-name="process_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="642">
+              <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -46,8 +48,35 @@
       <file leaf-file-name="elastic_net_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="40" column="68" lean-forward="true" selection-start-line="36" selection-end-line="40" selection-end-column="68" />
+            <state relative-caret-position="352">
+              <caret line="34" column="35" lean-forward="true" selection-start-line="32" selection-end-line="34" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_forest_regressor_train.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="75" lean-forward="true" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_forest_regressor_predict.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,8 +84,11 @@
       <file leaf-file-name="EDA_for_predict_submission.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EDA/EDA_for_predict_submission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+            <state relative-caret-position="804">
+              <caret line="62" lean-forward="true" selection-start-line="57" selection-end-line="62" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,20 +96,29 @@
       <file leaf-file-name="elastic_net_predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="13" column="7" selection-start-line="13" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="484">
+              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elastic_net_predict_submission.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="elastic_net_predict_submission.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-439">
-              <caret line="5" column="6" selection-start-line="5" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="716">
+              <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="submission.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elastic_net/submission.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31218">
+              <caret line="1419" selection-start-line="1419" selection-end-line="1419" />
             </state>
           </provider>
         </entry>
@@ -103,11 +144,12 @@
       <find>csv_df</find>
       <find>BsmtFinSF1</find>
       <find>type</find>
+      <find>x_test</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
-      <replace>csv_df</replace>
       <replace>x_test</replace>
+      <replace>csv_df</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -128,21 +170,21 @@
         <option value="$PROJECT_DIR$/random_forest_regressor.py" />
         <option value="$PROJECT_DIR$/common/split_train_test_data.py" />
         <option value="$PROJECT_DIR$/EDA/EDA.py" />
-        <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py" />
-        <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py" />
+        <option value="$PROJECT_DIR$/elastic_net/elastic_net_predict.py" />
         <option value="$PROJECT_DIR$/EDA/EDA_for_predict_submission.py" />
         <option value="$PROJECT_DIR$/common/process_data.py" />
         <option value="$PROJECT_DIR$/elastic_net/elastic_net_train.py" />
         <option value="$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py" />
-        <option value="$PROJECT_DIR$/elastic_net/elastic_net_predict.py" />
+        <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py" />
+        <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1937" />
-    <option name="height" value="1056" />
+    <option name="x" value="129" />
+    <option name="y" value="23" />
+    <option name="width" value="1635" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -152,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,6 +225,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,8 +376,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.elastic_net_predict_submission" />
-        <item itemvalue="Python.elastic_net_predict" />
         <item itemvalue="Python.elastic_net_train" />
+        <item itemvalue="Python.elastic_net_predict" />
         <item itemvalue="Python.EDA_for_predict_submission" />
         <item itemvalue="Python.EDA" />
       </list>
@@ -355,18 +397,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19936457" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19915701" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" x="-971" y="24" width="937" height="1004" id="Run" order="2" type="FLOATING" visible="true" weight="0.38786566" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="1.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" x="-1895" y="9" width="884" height="1006" id="Debug" order="3" type="FLOATING" visible="true" weight="0.36078006" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3617021" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -388,22 +430,22 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/EDA/EDA_for_predict_submission.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py</url>
-          <line>36</line>
+          <line>21</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/elastic_net/elastic_net_train.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/EDA/EDA_for_predict_submission.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EDA/EDA_for_predict_submission.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="66" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -416,63 +458,58 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>x_test.isnull().sum()</expression-string>
+        <expression-string>csv_df['Functional'].value_counts().index[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df.shape</expression-string>
+        <expression-string>csv_df['Utilities'].value_counts()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>null_count_df.shape</expression-string>
+        <expression-string>csv_df['Utilities'].value_counts().index[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>x_test.shape</expression-string>
+        <expression-string>csv_df.loc[csv_df['Utilities'].isnull()]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(null_count_df[null_count_df['null_count'] &gt; 1]).index</expression-string>
+        <expression-string>csv_df.loc[mask1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pd_csv.isnull().sum()</expression-string>
+        <expression-string>csv_df.loc[(csv_df['MSZoning'].isna()) &amp; (csv_df['MSSubClass'] == 20)]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pd_csv.isnull().sum().max()</expression-string>
+        <expression-string>csv_df.loc[(csv_df['MSZoning'].isnan()) &amp; (csv_df['MSSubClass'] == 20)]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pd_csv[pd_csv['GarageType']=='Detchd']['GarageArea'].mean()</expression-string>
+        <expression-string>csv_df.loc[(csv_df['MSZoning'].isnull()) &amp; (csv_df['MSSubClass'] == 20)]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>int(pd_csv[pd_csv['GarageType']=='Detchd']['GarageArea'].mean())</expression-string>
+        <expression-string>csv_df.loc[csv_df['MSZoning'].isnull() &amp; csv_df['LotArea'] == 21780.0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>csv_df.loc[csv_df['MSZoning'].isnull() &amp; csv_df['LotArea'] == 21780]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EDA/EDA2.ipynb" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA1.ipynb" />
     <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
@@ -525,7 +562,6 @@
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://$PROJECT_DIR$/common/EDA.py" />
-    <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA1.ipynb" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA2.ipynb" />
     <entry file="file://$PROJECT_DIR$/random_forest_regressor/rf_regressor_train_info.txt">
@@ -566,26 +602,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EDA/EDA2.py" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA1.py" />
-    <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/indexes/base.py" />
     <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -600,50 +616,84 @@
     <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
+    <entry file="file://$USER_HOME$/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py" />
+    <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="462">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EDA/EDA_for_predict_submission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        <state relative-caret-position="804">
+          <caret line="62" lean-forward="true" selection-start-line="57" selection-end-line="62" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/process_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="642">
+          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="40" column="68" lean-forward="true" selection-start-line="36" selection-end-line="40" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="13" column="7" selection-start-line="13" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="484">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-439">
-          <caret line="5" column="6" selection-start-line="5" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="716">
+          <caret line="33" column="95" selection-start-line="33" selection-start-column="95" selection-end-line="33" selection-end-column="95" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/submission.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31218">
+          <caret line="1419" selection-start-line="1419" selection-end-line="1419" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="32" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="75" lean-forward="true" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

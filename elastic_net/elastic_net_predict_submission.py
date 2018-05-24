@@ -13,21 +13,6 @@ print(
 
 x_test = process_data.get_clean_data(df_csv)
 
-# 將缺值的 TotalBsmtSF 以其平均數取代
-x_test['TotalBsmtSF'] = x_test['TotalBsmtSF'].fillna(x_test['TotalBsmtSF'].mean())
-
-# 將缺值的 KitchenQual 以 'TA' 取代
-x_test['KitchenQual'] = x_test['KitchenQual'].fillna('TA')
-
-# 將缺值的 GarageArea 以其平均數取代
-x_test['GarageArea'] = x_test['GarageArea'].fillna(int(x_test['GarageArea'].mean()))
-
-# 將缺值的 SaleType 以 'WD' 取代
-x_test['SaleType'] = x_test['SaleType'].fillna('WD')
-
-# 將缺值的 GarageCars 以 2 取代
-x_test['GarageCars'] = x_test['GarageCars'].fillna(2)
-
 print(
     'After processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(x_test)))
 print(
@@ -46,5 +31,5 @@ print('After clean, x_test(one-hot encoding).shape: ', x_test.shape)
 
 elastic_net_clf = joblib.load('elastic_net_dump.pkl')
 
-pd.DataFrame({"Id": np.arange(1461, 2920), "SalePrice": elastic_net_clf.predict(x_test)}).to_csv(
+pd.DataFrame({"Id": np.arange(1461, 2920), "SalePrice": np.exp(elastic_net_clf.predict(x_test))}).to_csv(
     'submission.csv', header=True, index=False)
