@@ -29,7 +29,7 @@ for col in categorical:
     x_test[col] = x_test[col].astype('category').cat.codes
 print('After clean, x_test(one-hot encoding).shape: ', x_test.shape)
 
-elastic_net_clf = joblib.load('elastic_net_dump.pkl')
+clf = joblib.load('elastic_net_dump.pkl')
 
-pd.DataFrame({"Id": np.arange(1461, 2920), "SalePrice": np.exp(elastic_net_clf.predict(x_test))}).to_csv(
+pd.DataFrame({"Id": np.arange(1461, 2920), "SalePrice": np.exp(clf.predict(x_test))}).to_csv(
     'submission.csv', header=True, index=False)

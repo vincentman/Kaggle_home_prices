@@ -27,7 +27,7 @@ def get_clean_data(csv_df):
     # 將 LotFrontage 缺值的內容補成 0
     csv_df['LotFrontage'].fillna(0, inplace=True)
 
-    # 將 LotFrontage 缺值的內容用「MasVnrType為BrkFace且Foundation為PConc」的樣本其 LotFrontage 的中位數去補
+    # 將 MasVnrArea 缺值的內容用「MasVnrType為BrkFace且Foundation為PConc」的樣本其 LotFrontage 的中位數去補
     mask = (csv_df['MasVnrArea'].isnull())
     csv_df.loc[mask, 'MasVnrArea'] = \
         csv_df[(csv_df['MasVnrType'] == 'BrkFace') & (csv_df['Foundation'] == 'PConc')][
@@ -39,14 +39,14 @@ def get_clean_data(csv_df):
     # 將 Fence 缺值的內容補成 'None'
     csv_df['Fence'].fillna('None', inplace=True)
 
-    # (test.csv)將缺值的 TotalBsmtSF 以其平均數取代
-    csv_df['TotalBsmtSF'] = csv_df['TotalBsmtSF'].fillna(csv_df['TotalBsmtSF'].mean())
+    # (test.csv)將缺值的 TotalBsmtSF 以其中位數取代
+    csv_df['TotalBsmtSF'] = csv_df['TotalBsmtSF'].fillna(csv_df['TotalBsmtSF'].median())
 
     # (test.csv)將缺值的 KitchenQual 以 'TA' 取代
     csv_df['KitchenQual'] = csv_df['KitchenQual'].fillna('TA')
 
-    # (test.csv)將缺值的 GarageArea 以其平均數取代
-    csv_df['GarageArea'] = csv_df['GarageArea'].fillna(int(csv_df['GarageArea'].mean()))
+    # (test.csv)將缺值的 GarageArea 以其中位數取代
+    csv_df['GarageArea'] = csv_df['GarageArea'].fillna(int(csv_df['GarageArea'].median()))
 
     # (test.csv)將缺值的 SaleType 以 'WD' 取代
     csv_df['SaleType'] = csv_df['SaleType'].fillna('WD')
@@ -64,14 +64,18 @@ def get_clean_data(csv_df):
     csv_df['Functional'] = csv_df['Functional'].fillna(csv_df['Functional'].value_counts().index[0])
 
     # 刪除缺值樣本數超過1個的欄位
-    csv_df = csv_df.drop(['PoolQC', 'MiscFeature', 'Alley', 'Fence', 'FireplaceQu', 'LotFrontage',
+    csv_df = csv_df.drop(['MiscFeature', 'Alley',
                           'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageQual', 'GarageCond',
-                          'BsmtExposure', 'BsmtFinType2', 'BsmtFinType1', 'BsmtCond', 'BsmtQual',
-                          'MasVnrArea', 'MasVnrType'], axis=1)
+                          'BsmtExposure', 'BsmtFinType2', 'BsmtFinType1', 'BsmtCond', 'BsmtQual', 'MasVnrType'], axis=1)
+    # csv_df = csv_df.drop(['PoolQC', 'MiscFeature', 'Alley', 'Fence', 'FireplaceQu', 'LotFrontage',
+    #                       'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageQual', 'GarageCond',
+    #                       'BsmtExposure', 'BsmtFinType2', 'BsmtFinType1', 'BsmtCond', 'BsmtQual',
+    #                       'MasVnrArea', 'MasVnrType'], axis=1)
 
     # 刪除 BsmtFinSF1, BsmtFinSF2 欄位，因為上一步已經把 BsmtFinType1, BsmtFinType2 欄位也刪了
     # 刪除 Exterior1st, Exterior2nd, BsmtUnfSF, BsmtFullBath, BsmtHalfBath 欄位，因為它與 SalePrice 似乎無關
-    csv_df = csv_df.drop(['BsmtFinSF1', 'BsmtFinSF2', 'Exterior1st', 'Exterior2nd', 'BsmtUnfSF', 'BsmtFullBath', 'BsmtHalfBath'], axis=1)
+    csv_df = csv_df.drop(
+        ['BsmtFinSF1', 'BsmtFinSF2', 'Exterior1st', 'Exterior2nd', 'BsmtUnfSF', 'BsmtFullBath', 'BsmtHalfBath'], axis=1)
 
     # 將 GrLivArea 做對數變換
     csv_df['GrLivArea'] = np.log(csv_df['GrLivArea'])

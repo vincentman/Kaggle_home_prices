@@ -1,2 +1,2 @@
-RMSE test: 0.163
-R^2 test: 0.828
+RMSE test: 0.156
+R^2 test: 0.840

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df_train = pd.read_csv('train.csv')
+df_train = pd.read_csv('../train.csv')
 
 total = df_train.isnull().sum().sort_values(ascending=False)
 percent = (df_train.isnull().sum() / df_train.isnull().count()).sort_values(ascending=False)

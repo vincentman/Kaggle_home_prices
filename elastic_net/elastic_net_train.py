@@ -14,7 +14,9 @@ from sklearn.linear_model import ElasticNetCV
 csv_df = pd.read_csv('../train.csv')
 
 print(
-    'Before processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(csv_df)))
+    'Before processing missing value, sample count(total:{}) =>\n{}'.format(csv_df.shape[0],
+                                                                            process_data.get_missing_value_sample_count(
+                                                                                csv_df)))
 print(
     'Before processing missing value, sample proportion =>\n{}'.format(
         process_data.get_missing_value_sample_proportion(csv_df)))

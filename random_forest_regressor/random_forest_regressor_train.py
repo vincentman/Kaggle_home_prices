@@ -40,6 +40,7 @@ print('x_train(one-hot encoding).shape: ', x_train.shape)
 # print('x_train(one-hot encoding).columns => \n', x_train.columns.values)
 
 start = time.time()
+# RandomForestRegressor 無法使用 GridSearch
 clf = RandomForestRegressor(n_estimators=1000,
                             criterion='mse',
                             random_state=1,
