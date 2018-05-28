@@ -44,6 +44,8 @@ start = time.time()
 clf = RandomForestRegressor(n_estimators=1000,
                             criterion='mse',
                             random_state=1,
+                            # max_features='sqrt',
+                            # max_depth=4,
                             n_jobs=-1)
 # clf = GradientBoostingRegressor(n_estimators=3000, learning_rate=0.05,
 #                                    max_depth=4, max_features='sqrt',
