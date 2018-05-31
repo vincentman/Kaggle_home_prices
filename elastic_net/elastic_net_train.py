@@ -13,13 +13,15 @@ from sklearn.linear_model import ElasticNetCV
 
 csv_df = pd.read_csv('../train.csv')
 
+print('Before cleaning data, csv_df.shape: ', csv_df.shape)
+
 print(
-    'Before processing missing value, sample count(total:{}) =>\n{}'.format(csv_df.shape[0],
+    'Before clean, sample count(total:{}) for missing value =>\n{}'.format(csv_df.shape[0],
                                                                             process_data.get_missing_value_sample_count(
-                                                                                csv_df)))
+                                                                                csv_df).to_string()))
 print(
-    'Before processing missing value, sample proportion =>\n{}'.format(
-        process_data.get_missing_value_sample_proportion(csv_df)))
+    'Before clean, sample proportion for missing value =>\n{}'.format(
+        process_data.get_missing_value_sample_proportion(csv_df).to_string()))
 
 df_train = process_data.get_clean_data(csv_df)
 
@@ -37,9 +39,9 @@ ids = df_train.sort_values(by='GrLivArea', ascending=False)[:2]['Id']
 df_train = df_train.drop(ids.index)
 
 print(
-    'After processing missing value, sample count =>\n{}'.format(process_data.get_missing_value_sample_count(df_train)))
+    'After clean, sample count (total:{}) for missing value =>\n{}'.format(df_train.shape[0],process_data.get_missing_value_sample_count(df_train)))
 print(
-    'After processing missing value, sample proportion =>\n{}'.format(
+    'After clean, sample proportion for missing value =>\n{}'.format(
         process_data.get_missing_value_sample_proportion(df_train)))
 
 x_train, y_train = split_train_test_data.get_splitted_data(True, df_train)

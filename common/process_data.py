@@ -4,20 +4,16 @@ import pandas as pd
 
 # 查看各欄位 missing value 的數量
 def get_missing_value_sample_count(df):
-    null_count_df = pd.DataFrame(df.isnull().sum())
-    null_count_df.set_axis(['null_count'], axis=1, inplace=True)
-    null_index = null_count_df[null_count_df['null_count'] == 0].index
-    null_count_df = null_count_df.drop(null_index).sort_values(by='null_count', ascending=False)
-    return null_count_df
+    cols_with_na = df.isnull().sum()
+    cols_with_na = cols_with_na[cols_with_na > 0]
+    return cols_with_na.sort_values(ascending=False)
 
 
 # 查看各欄位 missing value 的比例
 def get_missing_value_sample_proportion(df):
-    null_mean_df = pd.DataFrame(df.isnull().mean())
-    null_mean_df.set_axis(['null_mean'], axis=1, inplace=True)
-    null_index = null_mean_df[null_mean_df['null_mean'] == 0.].index
-    null_mean_df = null_mean_df.drop(null_index).sort_values(by='null_mean', ascending=False)
-    return null_mean_df
+    cols_with_na = df.isnull().mean()
+    cols_with_na = cols_with_na[cols_with_na > 0]
+    return cols_with_na.sort_values(ascending=False)
 
 
 def get_clean_data(csv_df):
