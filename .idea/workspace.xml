@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0be04df6-9610-4dd8-9bca-05a49a055c24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EDA/EDA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/EDA.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_dump.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_dump.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_predict_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_predict_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_train_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/random_forest_regressor/rf_regressor_train_info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic_net/.ipynb_checkpoints/Jack_Elastic_Net-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/.ipynb_checkpoints/Jack_Elastic_Net-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elastic_net/elastic_net_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net/elastic_net_train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="process_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/process_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state relative-caret-position="-996">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="random_forest_regressor_train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="random_forest_regressor_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+            <state relative-caret-position="257">
+              <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -42,10 +41,72 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="svr_train.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/svr/svr_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elastic_net_predict_submission.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="33" selection-start-line="33" selection-end-line="34" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elastic_net_train.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jack_Elastic_Net.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="21" selection-start-line="21" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="split_train_test_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="elastic_net_train_info.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="multiclass.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/multiclass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="3498">
               <caret line="171" selection-start-line="171" selection-end-line="171" />
             </state>
           </provider>
@@ -54,20 +115,8 @@
       <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="9240">
               <caret line="432" selection-start-line="432" selection-end-line="432" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="random_forest_regressor_predict.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="38" column="3" selection-start-line="38" selection-end-line="38" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -127,17 +176,18 @@
         <option value="$PROJECT_DIR$/EDA/EDA1.py" />
         <option value="$PROJECT_DIR$/EDA/EDA.py" />
         <option value="$PROJECT_DIR$/elastic_net/elastic_net_predict.py" />
-        <option value="$PROJECT_DIR$/elastic_net/elastic_net_train.py" />
         <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict_submission.py" />
         <option value="$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py" />
-        <option value="$PROJECT_DIR$/common/process_data.py" />
+        <option value="$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.py" />
         <option value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py" />
+        <option value="$PROJECT_DIR$/common/process_data.py" />
+        <option value="$PROJECT_DIR$/elastic_net/elastic_net_train.py" />
+        <option value="$PROJECT_DIR$/svr/svr_train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="94" />
-    <option name="y" value="44" />
+    <option name="x" value="100" />
     <option name="width" value="1536" />
     <option name="height" value="986" />
   </component>
@@ -149,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,16 +227,20 @@
               <item name="Kaggle_home_prices" type="462c0819:PsiDirectoryNode" />
               <item name="random_forest_regressor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Kaggle_home_prices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kaggle_home_prices" type="462c0819:PsiDirectoryNode" />
+              <item name="svr" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../machine_learn_Book/Book_Python_ML" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -216,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.random_forest_regressor_train">
+  <component name="RunManager" selected="Python.svr_train">
     <configuration name="Kaggle_home_prices" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="Kaggle_home_prices" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,6 +301,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EDA/EDA1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Jack_Elastic_Net" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Kaggle_home_prices" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/elastic_net" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,42 +360,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="random_forest_regressor_predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Kaggle_home_prices" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/random_forest_regressor" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="random_forest_regressor_predict_submission" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Kaggle_home_prices" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/random_forest_regressor" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict_submission.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="random_forest_regressor_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Kaggle_home_prices" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -341,22 +378,40 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="svr_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Kaggle_home_prices" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/svr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/svr/svr_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.EDA1" />
       <item itemvalue="Jupyter Notebook.Kaggle_home_prices" />
       <item itemvalue="Python.elastic_net_train" />
-      <item itemvalue="Python.elastic_net_predict" />
       <item itemvalue="Python.random_forest_regressor_train" />
-      <item itemvalue="Python.random_forest_regressor_predict" />
-      <item itemvalue="Python.random_forest_regressor_predict_submission" />
+      <item itemvalue="Python.svr_train" />
+      <item itemvalue="Python.elastic_net_predict" />
+      <item itemvalue="Python.Jack_Elastic_Net" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.random_forest_regressor_train" />
-        <item itemvalue="Python.random_forest_regressor_predict" />
+        <item itemvalue="Python.svr_train" />
         <item itemvalue="Python.elastic_net_train" />
-        <item itemvalue="Python.random_forest_regressor_predict_submission" />
+        <item itemvalue="Python.Jack_Elastic_Net" />
         <item itemvalue="Python.elastic_net_predict" />
+        <item itemvalue="Python.random_forest_regressor_train" />
       </list>
     </recent_temporary>
   </component>
@@ -378,38 +433,88 @@
       <option name="project" value="LOCAL" />
       <updated>1527154216782</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SVR">
+      <created>1527672265569</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527672265569</updated>
+    </task>
+    <task id="LOCAL-00003" summary="程式碼加註解">
+      <created>1527672358995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527672358995</updated>
+    </task>
+    <task id="LOCAL-00004" summary="程式碼加註解">
+      <created>1527672571090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527672571090</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15068494" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.20043337" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.33044422" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" x="-971" y="24" width="937" height="1004" id="Run" order="2" weight="0.2112676" />
+      <window_info anchor="bottom" x="-971" y="24" width="937" height="1004" id="Run" order="2" weight="0.31744313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" x="254" y="65" width="884" height="1006" id="Debug" order="3" weight="0.3564464" />
+      <window_info anchor="bottom" x="254" y="65" width="884" height="1006" id="Debug" order="3" weight="0.25893825" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2710496" />
+      <window_info anchor="bottom" id="Messages" order="7" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="submission01 backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="submission01 backup" />
+    <MESSAGE value="SVR" />
+    <MESSAGE value="程式碼加註解" />
+    <option name="LAST_COMMIT_MESSAGE" value="程式碼加註解" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -429,12 +534,44 @@
           <line>58</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="72" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="82" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>df_all[:5]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>df_test[:5]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>csv_df.isnull().sum(axis=1)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>csv_df.isnull().sum()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>train[train.isnull().sum()&gt;0].index</expression-string>
         <language-id>Python</language-id>
@@ -443,55 +580,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>x_train.shape</expression-string>
+        <expression-string>pd_csv.loc[:0, 'Alley'].isnull()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>y_train.shape</expression-string>
+        <expression-string>pd_csv.loc[:0, 'Alley']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df['Functional'].value_counts().index[0]</expression-string>
+        <expression-string>pd_csv.loc[:1, 'Alley']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df['Utilities'].value_counts()</expression-string>
+        <expression-string>pd_csv[:1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df['Utilities'].value_counts().index[0]</expression-string>
+        <expression-string>pd_csv[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df.loc[csv_df['Utilities'].isnull()]</expression-string>
+        <expression-string>a.isnull()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df.loc[mask1]</expression-string>
+        <expression-string>a.isna()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df.loc[(csv_df['MSZoning'].isna()) &amp; (csv_df['MSSubClass'] == 20)]</expression-string>
+        <expression-string>a.isnan()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>csv_df.loc[(csv_df['MSZoning'].isnan()) &amp; (csv_df['MSSubClass'] == 20)]</expression-string>
+        <expression-string>a.isnull</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EDA/EDA2.py" />
-    <entry file="file://$PROJECT_DIR$/common/EDA.py" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA2.py" />
     <entry file="file://$PROJECT_DIR$/common/EDA.py" />
     <entry file="file://$PROJECT_DIR$/EDA/EDA1.ipynb" />
@@ -512,18 +647,6 @@
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/model_selection/_split.py" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/model_selection/_search.py" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/linear_model/coordinate_descent.py" />
-    <entry file="file://$PROJECT_DIR$/train.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31697">
-          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31785" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_submission.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32098">
@@ -558,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,9 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -605,28 +715,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_info.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="704">
           <caret line="38" column="3" selection-start-line="38" selection-end-line="38" selection-end-column="3" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="31" column="3" selection-start-line="31" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="13" column="6" selection-start-line="13" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -660,16 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="63" column="18" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -679,14 +760,14 @@
     </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="9240">
           <caret line="432" selection-start-line="432" selection-end-line="432" />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/sklearn/utils/multiclass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="3498">
           <caret line="171" selection-start-line="171" selection-end-line="171" />
         </state>
       </provider>
@@ -698,20 +779,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/process_data.py">
+    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_info.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train_info.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/split_train_test_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="110">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/Jack_Elastic_Net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="21" selection-start-line="21" selection-end-line="32" selection-end-column="14" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/random_forest_regressor/random_forest_regressor_train.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31648">
+          <caret line="5" column="138" selection-start-line="5" selection-start-column="138" selection-end-line="5" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/process_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-996">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_train.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
-          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elastic_net/elastic_net_predict_submission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="33" selection-start-line="33" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svr/svr_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
