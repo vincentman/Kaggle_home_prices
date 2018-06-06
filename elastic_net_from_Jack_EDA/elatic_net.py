@@ -4,9 +4,9 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 import numpy as np
 from sklearn.externals import joblib
-from elastic_net_from_Jack_EDA import process_data
+from common import process_data_from_Jack
 
-processData = process_data.ProcessData()
+processData = process_data_from_Jack.ProcessData()
 
 processData.generate_clean_data()
 
@@ -39,7 +39,7 @@ with open('elastic_net_train_info.txt', 'w') as file:
 
 
 # validation ###########
-clf = joblib.load('elastic_net_dump.pkl')
+# clf = joblib.load('elastic_net_dump.pkl')
 x_test, y_test = processData.get_validation_data()
 y_test_pred = clf.predict(x_test)
 rmse_print = 'ElasticNetCV, test RMSE: %.3f' % (np.sqrt(mean_squared_error(y_test, y_test_pred)))

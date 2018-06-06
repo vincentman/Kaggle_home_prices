@@ -4,9 +4,9 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 import numpy as np
 from sklearn.externals import joblib
-from elastic_net_from_Jack_EDA import process_data
+from common import process_data_from_Jack
 
-processData = process_data.ProcessData()
+processData = process_data_from_Jack.ProcessData()
 
 processData.generate_clean_data()
 
