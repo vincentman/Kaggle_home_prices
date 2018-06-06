@@ -8,7 +8,7 @@ from common import process_data_from_Jack
 
 processData = process_data_from_Jack.ProcessData()
 
-processData.generate_clean_data()
+processData.feature_engineering()
 
 x_train, y_train = processData.get_training_data()
 

@@ -5,7 +5,7 @@ import pandas as pd
 
 processData = process_data_from_Jack.ProcessData()
 
-processData.generate_clean_data()
+processData.feature_engineering()
 
 x_test = processData.get_test_data()
 

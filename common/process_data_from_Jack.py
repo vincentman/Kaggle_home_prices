@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV, RepeatedKFold, cross_val_score
+from sklearn.metrics import make_scorer
 
 
 class ProcessData:
@@ -30,7 +32,7 @@ class ProcessData:
     def scale_minmax(col):
         return (col - col.min()) / (col.max() - col.min())
 
-    def generate_clean_data(self):
+    def feature_engineering(self):
         # combine train and test datas in to one dataframe
         df_all = pd.concat([self.df_csv_train, self.df_csv_test])
         print('train.shape=', self.df_csv_train.shape, ', test.shape=', self.df_csv_test.shape)
@@ -163,7 +165,6 @@ class ProcessData:
         df_all['LowQualFinFrac'] = df_all['LowQualFinSF'] / df_all['GrLivArea']
         df_all['1stFlrFrac'] = df_all['1stFlrSF'] / df_all['GrLivArea']
         df_all['2ndFlrFrac'] = df_all['2ndFlrSF'] / df_all['GrLivArea']
-
         df_all['TotalAreaSF'] = df_all['GrLivArea'] + df_all['TotalBsmtSF'] + df_all['GarageArea'] + df_all[
             'EnclosedPorch'] + \
                                 df_all['ScreenPorch']
@@ -191,19 +192,13 @@ class ProcessData:
 
         # Remaining columns
         df_all['BsmtExposure'].replace({'Gd': 4, 'Av': 3, 'Mn': 2, 'No': 1, 'None': 0}, inplace=True)
-
         df_all['CentralAir'].replace({'Y': 1, 'N': 0}, inplace=True)
-
         df_all['Functional'].replace(
             {'Typ': 7, 'Min1': 6, 'Min2': 5, 'Mod': 4, 'Maj1': 3, 'Maj2': 2, 'Sev': 1, 'Sal': 0},
             inplace=True)
-
         df_all['GarageFinish'].replace({'Fin': 3, 'RFn': 2, 'Unf': 1, 'None': 0}, inplace=True)
-
         df_all['LotShape'].replace({'Reg': 3, 'IR1': 2, 'IR2': 1, 'IR3': 0}, inplace=True)
-
         df_all['Utilities'].replace({'AllPub': 3, 'NoSewr': 2, 'NoSeWa': 1, 'ELO': 0}, inplace=True)
-
         df_all['LandSlope'].replace({'Gtl': 2, 'Mod': 1, 'Sev': 0}, inplace=True)
 
         # 7.Dealing with Zeros #########
@@ -396,8 +391,9 @@ class ProcessData:
     def get_test_data(self):
         return self.df_model.loc[self.id_test].drop('SalePrice', axis=1)
 
+    @staticmethod
     # metric for evaluation
-    def rmse(self, y_true, y_pred):
+    def rmse(y_true, y_pred):
         diff = y_pred - y_true
         sum_sq = sum(diff ** 2)
         n = len(y_pred)
@@ -425,7 +421,7 @@ class ProcessData:
 
         # print and plot the results
         print('R2=', model.score(X, y))
-        print('rmse=', self.rmse(y, y_pred))
+        print('rmse=', ProcessData.rmse(y, y_pred))
         print('---------------------------------------')
 
         print('mean of residuals:', mean_resid)
@@ -436,3 +432,49 @@ class ProcessData:
         print(outliers.tolist())
 
         return outliers
+
+    @staticmethod
+    def train_model(model, param_grid=[], X=[], y=[],
+                    splits=5, repeats=5):
+        # create cross-validation method
+        rkfold = RepeatedKFold(n_splits=splits, n_repeats=repeats)
+
+        # perform a grid search if param_grid given
+        if len(param_grid) > 0:
+            # setup grid search parameters
+            gsearch = GridSearchCV(model, param_grid, cv=rkfold,
+                                   scoring=make_scorer(ProcessData.rmse, greater_is_better=False),
+                                   verbose=1, return_train_score=True)
+
+            # search the grid
+            gsearch.fit(X, y)
+
+            # extract best model from the grid
+            model = gsearch.best_estimator_
+            best_idx = gsearch.best_index_
+
+            # get cv-scores for best model
+            grid_results = pd.DataFrame(gsearch.cv_results_)
+            cv_mean = abs(grid_results.loc[best_idx, 'mean_test_score'])
+            cv_std = grid_results.loc[best_idx, 'std_test_score']
+
+        # no grid search, just cross-val score for given model
+        else:
+            grid_results = []
+            cv_results = cross_val_score(model, X, y, scoring=make_scorer(ProcessData.rmse, greater_is_better=False), cv=rkfold)
+            cv_mean = abs(np.mean(cv_results))
+            cv_std = np.std(cv_results)
+
+        # combine mean and std cv-score in to a pandas series
+        cv_score = pd.Series({'mean': cv_mean, 'std': cv_std})
+
+        # predict y using the fitted model
+        y_pred = model.predict(X)
+
+        # print stats on model performance
+        print('----------------------')
+        print(model)
+        print('----------------------')
+        print('R^2=', model.score(X, y))
+        print('RMSE=', ProcessData.rmse(y, y_pred))
+        print('cross_val: mean=', cv_mean, ', std=', cv_std)
