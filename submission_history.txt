@@ -1,15 +1,19 @@
-(4) 2018/06/06  16:50
+(04) 2018/06/06  16:50
+0. package: elastic_net_from_Jack_EDA
 1. EDA with removing outlier
 submission score = 0.12291
 ------------------------------------------------
-(3) 2018/06/06
+(03) 2018/06/06
+0. package: elastic_net_from_Jack_EDA
 1. use Jack EDA with ElasticNetCV
 submission score = 0.12363
 ------------------------------------------------
-(2) 2018/05/25
+(02) 2018/05/25
+0. package: random_forest_regressor
 1. use RandomForestRegressor
 submission score = 0.13104
 ------------------------------------------------
-(1) 2018/05/24
+(01) 2018/05/24
+0. package: elastic_net
 1. use ElasticNetCV
 submission score = 0.13104

@@ -1,0 +1,2 @@
+ElasticNetCV, test RMSE: 0.127
+ElasticNetCV, test R^2: 0.892

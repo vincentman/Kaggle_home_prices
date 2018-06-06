@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0be04df6-9610-4dd8-9bca-05a49a055c24" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/submission04/elastic_net_dump.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission04/elastic_net_predict_info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission04/elastic_net_predict_submission.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission04/elastic_net_train_info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission04/elatic_net.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission04/submission.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EDA/Jack_EDA.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/Jack_EDA.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_dump.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_dump.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_predict_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_predict_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_predict_submission.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_predict_submission.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_train_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_train_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elatic_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/elatic_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/process_data_from_Jack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/submission.csv" beforeDir="false" afterPath="$PROJECT_DIR$/elastic_net_from_Jack_EDA/submission.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submission03/elatic_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/submission03/elatic_net.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/submission_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/submission_history.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +56,20 @@
       <file leaf-file-name="elatic_net.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elastic_net_from_Jack_EDA/elatic_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="453">
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="submission_history.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/submission_history.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -185,7 +191,7 @@
             <path>
               <item name="Kaggle_home_prices" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kaggle_home_prices" type="462c0819:PsiDirectoryNode" />
-              <item name="random_forest_regressor" type="462c0819:PsiDirectoryNode" />
+              <item name="submission03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,6 +217,7 @@
       <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\random_forest_regressor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\submission04" />
       <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\submission03" />
       <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\elastic_net" />
       <recent name="D:\machine_learn\kaggle\Kaggle_home_prices\submission01" />
@@ -418,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528264778669</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="4th submisson - EDA, remove outlier">
+      <created>1528276176000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528276176000</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -478,7 +492,8 @@
     <MESSAGE value="SVR" />
     <MESSAGE value="程式碼加註解" />
     <MESSAGE value="submission03 backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="submission03 backup" />
+    <MESSAGE value="4th submisson - EDA, remove outlier" />
+    <option name="LAST_COMMIT_MESSAGE" value="4th submisson - EDA, remove outlier" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -586,7 +601,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EDA/EDA1.ipynb" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://D:/Anaconda3/envs/myenv/Lib/site-packages/pandas/core/frame.py" />
     <entry file="file://$PROJECT_DIR$/common/EDA.py" />
@@ -841,13 +855,6 @@
     <entry file="file://$PROJECT_DIR$/elastic_net_from_Jack_EDA/submission.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/submission_history.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elastic_net_from_Jack_EDA/elastic_net_predict_submission.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -865,10 +872,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submission_history.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/elastic_net_from_Jack_EDA/elatic_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="453">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
