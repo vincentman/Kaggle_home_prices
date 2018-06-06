@@ -1,3 +1,11 @@
+(3) 2018/06/06
+1. use Jack EDA with ElasticNetCV
+submission score = 0.12363
+------------------------------------------------
+(2) 2018/05/25
+1. use RandomForestRegressor
+submission score = 0.13104
 ------------------------------------------------
 (1) 2018/05/24
+1. use ElasticNetCV
 submission score = 0.13104
