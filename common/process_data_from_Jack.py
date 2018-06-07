@@ -433,48 +433,55 @@ class ProcessData:
 
         return outliers
 
-    @staticmethod
-    def train_model(model, param_grid=[], X=[], y=[],
+    def train_model(self, best_model, param_grid=[], X=[], y=[],
                     splits=5, repeats=5):
+        # get unmodified training data, unless data to use already specified
+        if len(y) == 0:
+            X, y = self.get_training_data()
+
         # create cross-validation method
         rkfold = RepeatedKFold(n_splits=splits, n_repeats=repeats)
 
         # perform a grid search if param_grid given
         if len(param_grid) > 0:
             # setup grid search parameters
-            gsearch = GridSearchCV(model, param_grid, cv=rkfold,
-                                   scoring=make_scorer(ProcessData.rmse, greater_is_better=False),
-                                   verbose=1, return_train_score=True)
+            gs = GridSearchCV(best_model, param_grid, cv=rkfold,
+                              scoring=make_scorer(ProcessData.rmse, greater_is_better=False),
+                              verbose=1, return_train_score=True)
 
             # search the grid
-            gsearch.fit(X, y)
+            gs.fit(X, y)
 
             # extract best model from the grid
-            model = gsearch.best_estimator_
-            best_idx = gsearch.best_index_
+            best_model = gs.best_estimator_
+            best_idx = gs.best_index_
 
             # get cv-scores for best model
-            grid_results = pd.DataFrame(gsearch.cv_results_)
+            grid_results = pd.DataFrame(gs.cv_results_)
             cv_mean = abs(grid_results.loc[best_idx, 'mean_test_score'])
             cv_std = grid_results.loc[best_idx, 'std_test_score']
 
         # no grid search, just cross-val score for given model
         else:
             grid_results = []
-            cv_results = cross_val_score(model, X, y, scoring=make_scorer(ProcessData.rmse, greater_is_better=False), cv=rkfold)
+            cv_results = cross_val_score(best_model, X, y,
+                                         scoring=make_scorer(ProcessData.rmse, greater_is_better=False), cv=rkfold)
             cv_mean = abs(np.mean(cv_results))
             cv_std = np.std(cv_results)
 
-        # combine mean and std cv-score in to a pandas series
-        cv_score = pd.Series({'mean': cv_mean, 'std': cv_std})
-
         # predict y using the fitted model
-        y_pred = model.predict(X)
+        y_pred = best_model.predict(X)
 
         # print stats on model performance
-        print('----------------------')
-        print(model)
-        print('----------------------')
-        print('R^2=', model.score(X, y))
-        print('RMSE=', ProcessData.rmse(y, y_pred))
+        print('--------------------------------------------')
+        print(best_model)
+        print('--------------------------------------------')
+        rsquare = best_model.score(X, y)
+        print('R^2=', rsquare)
+        rmse = ProcessData.rmse(y, y_pred)
+        print('RMSE=', rmse)
         print('cross_val: mean=', cv_mean, ', std=', cv_std)
+
+        score = pd.Series({'cv_mean': cv_mean, 'cv_std': cv_std, 'rmse': rmse, 'rsquare': rsquare})
+
+        return best_model, score, grid_results
