@@ -11,5 +11,6 @@ model_ElasticNet = {"model_name": 'ElasticNet', 'model': ElasticNet(),
 
 
 def get_model():
-    for i in [model_Ridge, model_ElasticNet]:
+    for i in [model_Ridge]:
+    # for i in [model_Ridge, model_ElasticNet]:
         yield i

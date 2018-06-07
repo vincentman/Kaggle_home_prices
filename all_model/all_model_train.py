@@ -44,3 +44,5 @@ while True:
     scores_on_models = scores_on_models.append(score)
 
 print('Final score ==========>\n', scores_on_models.sort_values(by='rmse'))
+scores_on_models.to_csv(
+    'model_train_score.csv', header=True, index=True)
