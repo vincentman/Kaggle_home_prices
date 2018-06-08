@@ -473,15 +473,17 @@ class ProcessData:
         y_pred = best_model.predict(X)
 
         # print stats on model performance
-        print('--------------------------------------------')
-        print(best_model)
-        print('--------------------------------------------')
-        rsquare = best_model.score(X, y)
-        print('R^2=', rsquare)
-        rmse = ProcessData.rmse(y, y_pred)
-        print('RMSE=', rmse)
-        print('cross_val: mean=', cv_mean, ', std=', cv_std)
+        # print('--------------------------------------------')
+        # print(best_model)
+        # print('--------------------------------------------')
+        rsquare = '%.5f' % best_model.score(X, y)
+        # print('R^2=', rsquare)
+        rmse = '%.5f' % ProcessData.rmse(y, y_pred)
+        # print('RMSE=', rmse)
+        cv_mean = '%.5f' % (cv_mean)
+        cv_std = '%.5f' % (cv_std)
+        # print('cross_val: mean=', cv_mean, ', std=', cv_std)
 
-        score = pd.Series({'cv_mean': cv_mean, 'cv_std': cv_std, 'rmse': rmse, 'rsquare': rsquare})
+        score = pd.Series({'rmse': rmse, 'rsquare': rsquare, 'cv_mean': cv_mean, 'cv_std': cv_std})
 
         return best_model, score, grid_results

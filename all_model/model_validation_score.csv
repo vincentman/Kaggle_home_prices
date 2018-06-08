@@ -1,0 +1,3 @@
+,rmse,rsquare
+Ridge,0.13116,0.88509
+ElasticNet,0.12604,0.89389

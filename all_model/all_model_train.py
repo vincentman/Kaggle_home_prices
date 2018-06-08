@@ -19,7 +19,7 @@ x_train, y_train = processData.get_training_data()
 
 # places to store optimal models and scores
 best_model_instances = dict()
-scores_on_models = pd.DataFrame(columns=['cv_mean', 'cv_std', 'rmse', 'rsquare'])
+train_scores_on_models = pd.DataFrame(columns=['rmse', 'rsquare', 'cv_mean', 'cv_std'])
 
 # no. k-fold splits
 splits = 5
@@ -41,8 +41,27 @@ while True:
         y=y_train,
         splits=splits, repeats=repeats)
     score.name = model_name
-    scores_on_models = scores_on_models.append(score)
+    train_scores_on_models = train_scores_on_models.append(score)
 
-print('Final score ==========>\n', scores_on_models.sort_values(by='rmse'))
-scores_on_models.to_csv(
+print('============= Final train score =============\n', train_scores_on_models.sort_values(by='rmse'),
+      '\n=====================================')
+train_scores_on_models.to_csv(
     'model_train_score.csv', header=True, index=True)
+
+# validation ###########
+validation_scores_on_models = pd.DataFrame(columns=['rmse', 'rsquare'])
+for model_name, model_instance in best_model_instances.items():
+    x_test, y_test = processData.get_validation_data()
+    y_test_pred = model_instance.predict(x_test)
+    rsquare = '%.5f' % r2_score(y_test, y_test_pred)
+    # print('validation, R^2=', rsquare)
+    rmse = '%.5f' % ProcessData.rmse(y_test, y_test_pred)
+    # print('validation, RMSE=', rmse)
+    score = pd.Series({'rmse': rmse, 'rsquare': rsquare})
+    score.name = model_name
+    validation_scores_on_models = validation_scores_on_models.append(score)
+
+print('========== Final validation score ==========\n', validation_scores_on_models.sort_values(by='rmse'),
+      '\n======================================')
+validation_scores_on_models.to_csv(
+    'model_validation_score.csv', header=True, index=True)
