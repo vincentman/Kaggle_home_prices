@@ -1,0 +1,4 @@
+,rmse,rsquare
+Ridge,0.13153,0.88444
+ElasticNet,0.12604,0.89389
+GradientBoostingRegressor,0.13368,0.88063

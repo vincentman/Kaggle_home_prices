@@ -19,7 +19,7 @@ x_train, y_train = processData.get_training_data()
 
 # places to store optimal models and scores
 best_model_instances = dict()
-train_scores_on_models = pd.DataFrame(columns=['rmse', 'rsquare', 'cv_mean', 'cv_std'])
+train_scores_on_models = pd.DataFrame(columns=['rmse', 'rsquare', 'cv_mean', 'cv_std', 'train_time'])
 
 # no. k-fold splits
 splits = 5
@@ -35,11 +35,16 @@ while True:
     model_name = model['model_name']
     model_instance = model['model']
     model_param_grid = model['param_grid']
-    best_model_instances[model_name], score, grid_results = processData.train_model(
+    start = time.time()
+    best_model_instances[model_name], (rmse, rsquare, cv_mean, cv_std), grid_results = processData.train_model(
         model_instance,
         param_grid=model_param_grid, X=x_train,
         y=y_train,
         splits=splits, repeats=repeats)
+    end = time.time()
+    train_time = '%.2fmin' % ((end - start) / 60)
+    score = pd.Series(
+        {'rmse': rmse, 'rsquare': rsquare, 'cv_mean': cv_mean, 'cv_std': cv_std, 'train_time': train_time})
     score.name = model_name
     train_scores_on_models = train_scores_on_models.append(score)
 

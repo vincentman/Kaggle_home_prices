@@ -484,6 +484,7 @@ class ProcessData:
         cv_std = '%.5f' % (cv_std)
         # print('cross_val: mean=', cv_mean, ', std=', cv_std)
 
-        score = pd.Series({'rmse': rmse, 'rsquare': rsquare, 'cv_mean': cv_mean, 'cv_std': cv_std})
+        # score = pd.Series({'rmse': rmse, 'rsquare': rsquare, 'cv_mean': cv_mean, 'cv_std': cv_std})
 
-        return best_model, score, grid_results
+        # return best_model, score, grid_results
+        return best_model, (rmse, rsquare, cv_mean, cv_std), grid_results

@@ -1,3 +1,2 @@
-,rmse,rsquare,cv_mean,cv_std
-Ridge,0.07826,0.96199,0.10470,0.00498
-ElasticNet,0.08359,0.95664,0.10049,0.00734
+,rmse,rsquare,cv_mean,cv_std,train_time
+Ridge,0.07826,0.96199,0.10446,0.00795,0.07min
