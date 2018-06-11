@@ -2,3 +2,5 @@
 Ridge,0.13153,0.88444
 ElasticNet,0.12604,0.89389
 GradientBoostingRegressor,0.13368,0.88063
+SVR,0.08765,0.95233,0.11066,0.00766,1.57min
+RandomForestRegressor,0.04835,0.98549,0.12837,0.01229,5.49min
