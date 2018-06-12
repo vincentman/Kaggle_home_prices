@@ -7,7 +7,7 @@ from sklearn.metrics import make_scorer
 
 
 class ProcessData:
-    train_data_ratio = 0.6
+    train_data_ratio = 0.7
 
     def __init__(self):
         self.df_csv_train = pd.read_csv('../train.csv', index_col='Id')
@@ -375,7 +375,7 @@ class ProcessData:
 
     def split_data_to_train_validation(self):
         df_model_train = self.df_model.loc[self.id_train]
-        self.id_train = df_model_train.loc[:df_model_train.shape[0] * ProcessData.train_data_ratio].index
+        self.id_train = df_model_train.loc[1:df_model_train.shape[0] * ProcessData.train_data_ratio-1].index
         self.id_validation = df_model_train.loc[df_model_train.shape[0] * ProcessData.train_data_ratio:].index
 
     # function to get training samples

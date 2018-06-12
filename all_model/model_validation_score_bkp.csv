@@ -1,6 +1,6 @@
 ,rmse,rsquare
-Ridge,0.13153,0.88444
+Ridge,0.13476,0.87763
 ElasticNet,0.12604,0.89389
-GradientBoostingRegressor,0.13368,0.88063
-SVR,0.13338,0.88116
-RandomForestRegressor,0.14006,0.86897
+GradientBoostingRegressor,0.12821,0.88923
+SVR,0.13602,0.87533
+RandomForestRegressor,0.13879,0.87020
