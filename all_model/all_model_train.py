@@ -1,14 +1,8 @@
 import pandas as pd
-from sklearn.linear_model import ElasticNetCV
 import time
 from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
-import numpy as np
-from sklearn.externals import joblib
 from common import process_data_from_Jack
 from common.process_data_from_Jack import ProcessData
-from sklearn.linear_model import Ridge
-from sklearn.linear_model import ElasticNet
 from all_model import model_generator
 
 processData = process_data_from_Jack.ProcessData()

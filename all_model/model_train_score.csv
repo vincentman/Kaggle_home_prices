@@ -1,2 +1,2 @@
 ,rmse,rsquare,cv_mean,cv_std,train_time
-RandomForestRegressor,0.04583,0.98671,0.12469,0.01172,6.12min
+Ridge,0.07882,0.95871,0.09491,0.00556,0.11min

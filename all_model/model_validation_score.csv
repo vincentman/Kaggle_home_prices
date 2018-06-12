@@ -1,2 +1,2 @@
 ,rmse,rsquare
-RandomForestRegressor,0.13879,0.87020
+Ridge,0.13552,0.87648
