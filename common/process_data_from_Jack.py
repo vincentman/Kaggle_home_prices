@@ -375,8 +375,8 @@ class ProcessData:
 
     def split_data_to_train_validation(self):
         df_model_train = self.df_model.loc[self.id_train]
-        self.id_train = df_model_train.loc[1:df_model_train.shape[0] * ProcessData.train_data_ratio-1].index
-        self.id_validation = df_model_train.loc[df_model_train.shape[0] * ProcessData.train_data_ratio:].index
+        self.id_train = df_model_train.loc[1:df_model_train.shape[0] * ProcessData.train_data_ratio].index
+        self.id_validation = df_model_train.loc[df_model_train.shape[0] * ProcessData.train_data_ratio + 1:].index
 
     # function to get training samples
     def get_training_data(self):
