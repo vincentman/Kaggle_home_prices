@@ -46,7 +46,7 @@ gs = GridSearchCV(estimator=stregr,
 start = time.time()
 gs.fit(x_train, y_train)
 end = time.time()
-elapsed_train_time = 'ElasticNet, elapsed training time: {} min, {} sec '.format(int((end - start) / 60),
+elapsed_train_time = 'StackingRegressor with GridSearchCV, elapsed training time: {} min, {} sec '.format(int((end - start) / 60),
                                                                                  int((end - start) % 60))
 print(elapsed_train_time)
 
