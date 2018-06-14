@@ -20,6 +20,7 @@ processData.feature_engineering()
 
 x_train, y_train = processData.get_training_data()
 
+# param_alpha = np.arange(1e-4, 1e-3, 1e-4)
 param_alpha = [0.1, 1, 10]
 # param_alpha = [0.1]
 
@@ -35,9 +36,9 @@ stregr = StackingCVRegressor(regressors=[Ridge(), Lasso()],
                              use_features_in_secondary=True)
 
 # param_n_estimators = [100, 1000, 10000]
-param_n_estimators = [100, 1000]
-elastic_net_param_alpha = np.arange(1e-4, 1e-3, 1e-4)
-elastic_net_param_l1_ratio = np.arange(0.1, 1.0, 0.1)
+param_n_estimators = [100]
+# elastic_net_param_alpha = np.arange(1e-4, 1e-3, 1e-4)
+# elastic_net_param_l1_ratio = np.arange(0.1, 1.0, 0.1)
 # param_grid = {'ridge__alpha': param_alpha, 'lasso__alpha': param_alpha,
 #                               'meta-elasticnet__alpha': elastic_net_param_alpha,
 #                               'meta-elasticnet__l1_ratio': elastic_net_param_l1_ratio,
@@ -88,7 +89,9 @@ with open('stack_cv_regressor_score_info.txt', 'w') as file:
 
 # validation ###########
 x_test, y_test = processData.get_validation_data()
-y_test_pred = best_model.predict(x_test)
+clf = joblib.load('stack_cv_regressor_dump.pkl')
+y_test_pred = clf.predict(x_test)
+# y_test_pred = best_model.predict(x_test)
 validation_score_info = 'StackingRegressor, validation score: RMSE=%.3f, R^2=%.3f' % (
     np.sqrt(mean_squared_error(y_test, y_test_pred)), r2_score(y_test, y_test_pred))
 print(validation_score_info)

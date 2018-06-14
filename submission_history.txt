@@ -1,3 +1,8 @@
+(05) 2018/06/14  08:30
+0. package: stacking_regressor
+1. Stacking regressor
+submission score = 0.12234
+------------------------------------------------
 (04) 2018/06/06  16:50
 0. package: elastic_net_from_Jack_EDA
 1. EDA with removing outlier
