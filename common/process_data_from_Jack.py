@@ -7,7 +7,7 @@ from sklearn.metrics import make_scorer
 
 
 class ProcessData:
-    train_data_ratio = 0.7
+    train_data_ratio = 0.9
 
     def __init__(self):
         self.df_csv_train = pd.read_csv('../train.csv', index_col='Id')

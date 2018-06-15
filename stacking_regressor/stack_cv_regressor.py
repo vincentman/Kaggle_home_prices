@@ -22,7 +22,6 @@ x_train, y_train = processData.get_training_data()
 
 # param_alpha = np.arange(1e-4, 1e-3, 1e-4)
 param_alpha = [0.1, 1, 10]
-# param_alpha = [0.1]
 
 # The StackingCVRegressor uses scikit-learn's check_cv
 # internally, which doesn't support a random seed. Thus
@@ -31,13 +30,15 @@ param_alpha = [0.1, 1, 10]
 RANDOM_SEED = 33
 np.random.seed(RANDOM_SEED)
 stregr = StackingCVRegressor(regressors=[Ridge(), Lasso()],
+# stregr = StackingCVRegressor(regressors=[Ridge(), Lasso(), RandomForestRegressor(random_state=RANDOM_SEED)],
                              # meta_regressor=ElasticNet(),
-                             meta_regressor=RandomForestRegressor(random_state=RANDOM_SEED),
+                             meta_regressor=ElasticNet(),
                              use_features_in_secondary=True)
 
-# param_n_estimators = [100, 1000, 10000]
-param_n_estimators = [100]
+# rfr_param_n_estimators = [100]
+elastic_net_param_alpha = [0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007]
 # elastic_net_param_alpha = np.arange(1e-4, 1e-3, 1e-4)
+elastic_net_param_l1_ratio = [0.8, 0.85, 0.9, 0.95, 0.99, 1]
 # elastic_net_param_l1_ratio = np.arange(0.1, 1.0, 0.1)
 # param_grid = {'ridge__alpha': param_alpha, 'lasso__alpha': param_alpha,
 #                               'meta-elasticnet__alpha': elastic_net_param_alpha,
@@ -45,7 +46,10 @@ param_n_estimators = [100]
 #                               'meta-elasticnet__max_iter':[1000]
 #                               }
 param_grid = {'ridge__alpha': param_alpha, 'lasso__alpha': param_alpha,
-              'meta-randomforestregressor__n_estimators': param_n_estimators}
+              # 'randomforestregressor__n_estimators': rfr_param_n_estimators,
+              'meta-elasticnet__alpha': elastic_net_param_alpha,
+              'meta-elasticnet__l1_ratio': elastic_net_param_l1_ratio,
+              }
 gs = GridSearchCV(estimator=stregr,
                   param_grid=param_grid,
                   cv=5,
