@@ -40,13 +40,13 @@ class ProcessData:
         cols_with_na = ProcessData.get_cols_with_na(df_all.drop('SalePrice', axis=1))
         print(cols_with_na.sort_values(ascending=False).to_string())
 
-        # 1.Meaningful NaN Values #########
-        # columns where NaN values have meaning e.g. no pool etc.
+        # 1.Meaningful NA Values #########
+        # columns where NA values have meaning, e.g. no pool, no basement, etc.
         cols_fillna = ['PoolQC', 'MiscFeature', 'Alley', 'Fence', 'MasVnrType', 'FireplaceQu',
                        'GarageQual', 'GarageCond', 'GarageFinish', 'GarageType',
                        'BsmtExposure', 'BsmtCond', 'BsmtQual', 'BsmtFinType1', 'BsmtFinType2']
 
-        # replace 'NaN' with 'None' in these columns
+        # replace 'NA' with 'None' in these columns
         for col in cols_fillna:
             df_all[col].fillna('None', inplace=True)
 
@@ -69,9 +69,9 @@ class ProcessData:
         df_all.GarageArea.fillna(0, inplace=True)
         df_all.GarageCars.fillna(0, inplace=True)
 
-        # 2.LotFrontage NaN Values #########
+        # 2.LotFrontage NA Values #########
         # LotFrontage
-        # fill nan values using a linear regressor
+        # fill NA values using a linear regressor
 
         # convert categoricals to dummies, exclude SalePrice from model
         df_frontage = pd.get_dummies(df_all.drop('SalePrice', axis=1))
@@ -93,21 +93,21 @@ class ProcessData:
 
         print('----------------')
         print('Intercept:', lr.intercept_)
-        print('----------------head(10)')
+        print('----------------coefficient: head(10)')
         print(lr_coefs.sort_values(ascending=False).head(10))
-        print('----------------tail(10)')
+        print('----------------coefficient: tail(10)')
         print(lr_coefs.sort_values(ascending=False).tail(10))
         print('----------------')
         print('R2:', lr.score(lf_train_X, lf_train_y))
         print('----------------')
 
         # fill na values using model predictions
-        nan_frontage = df_all.LotFrontage.isnull()
-        X = df_frontage[nan_frontage].drop('LotFrontage', axis=1)
+        na_frontage = df_all.LotFrontage.isnull()
+        X = df_frontage[na_frontage].drop('LotFrontage', axis=1)
         y = lr.predict(X)
 
-        # fill nan values
-        df_all.loc[nan_frontage, 'LotFrontage'] = y
+        # fill na values
+        df_all.loc[na_frontage, 'LotFrontage'] = y
 
         # 3.Remaining NaNs #########
         print(cols_with_na.sort_values(ascending=False).to_string())
@@ -116,11 +116,9 @@ class ProcessData:
         rows_with_na = rows_with_na[rows_with_na > 0]
         print(rows_with_na.sort_values(ascending=False).to_string())
 
-        # fill remaining nans with mode in that column
+        # fill remaining NA with mode in that column
         for col in cols_with_na.index:
             df_all[col].fillna(df_all[col].mode()[0], inplace=True)
-        # check nans
-        df_all.drop('SalePrice', axis=1).isnull().sum().max()
 
         # Now no more NaN values
         df_all.info()
@@ -155,11 +153,8 @@ class ProcessData:
         # also create features representing the fraction of the basement that is each finish type
         for col in bsmt_fin_cols:
             df_all[col + 'Frac'] = df_all[col + 'SF'] / df_all['TotalBsmtSF']
-            # replace any nans with zero (for properties without a basement)
+            # replace any NA with zero (for properties without a basement)
             df_all[col + 'Frac'].fillna(0, inplace=True)
-
-        # check nans
-        df_all.drop('SalePrice', axis=1).isnull().sum().max()
 
         # 5.1st and 2nd Floor Area #########
         df_all['LowQualFinFrac'] = df_all['LowQualFinSF'] / df_all['GrLivArea']
@@ -300,7 +295,7 @@ class ProcessData:
         df_all[scale_cols].describe()
 
         # 12.Box-Cox Transform Suitable Variables #########
-        # variables not suitable for box-cox transformation based on above (usually due to excessive zeros)
+        # variables not suitable for box-cox transformation (usually due to excessive zeros)
         cols_notransform = ['2ndFlrSF', '1stFlrFrac', '2ndFlrFrac', 'StorageAreaSF',
                             'EnclosedPorch', 'LowQualFinSF', 'MasVnrArea',
                             'MiscVal', 'ScreenPorch', 'OpenPorchSF', 'WoodDeckSF', 'SalePrice',

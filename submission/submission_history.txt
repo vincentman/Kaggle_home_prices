@@ -1,6 +1,6 @@
-(06) 2018/06/15  11:45
+*(06) 2018/06/15  11:45
 1. StackingCVRegressor
-submission score = 0.11879
+submission score = 0.11879 (Top 14%)
 ------------------------------------------------
 (05) 2018/06/14  08:30
 0. package: stacking_regressor

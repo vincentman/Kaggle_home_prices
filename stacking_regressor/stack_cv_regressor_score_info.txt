@@ -1,4 +1,4 @@
-StackingCVRegressor, elapsed training time: 3 min, 43 sec 
+StackingCVRegressor, elapsed training time: 3 min, 37 sec 
 --------------------------------------------
 StackingCVRegressor(cv=5,
           meta_regressor=ElasticNet(alpha=0.0003, copy_X=True, fit_intercept=True, l1_ratio=0.8,

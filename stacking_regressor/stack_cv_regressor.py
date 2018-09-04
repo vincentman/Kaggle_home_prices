@@ -13,6 +13,10 @@ import pandas as pd
 from common.process_data_from_Jack import ProcessData
 from sklearn.metrics import make_scorer
 from sklearn.externals import joblib
+from sklearn.exceptions import ConvergenceWarning
+
+import warnings
+warnings.filterwarnings('ignore', category=ConvergenceWarning, append=True)
 
 processData = process_data_from_Jack.ProcessData()
 
@@ -95,7 +99,6 @@ with open('stack_cv_regressor_score_info.txt', 'w') as file:
 x_test, y_test = processData.get_validation_data()
 clf = joblib.load('stack_cv_regressor_dump.pkl')
 y_test_pred = clf.predict(x_test)
-# y_test_pred = best_model.predict(x_test)
 validation_score_info = 'StackingRegressor, validation score: RMSE=%.3f, R^2=%.3f' % (
     np.sqrt(mean_squared_error(y_test, y_test_pred)), r2_score(y_test, y_test_pred))
 print(validation_score_info)
